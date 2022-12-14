@@ -38,5 +38,5 @@ $ npm run test:cov
 ## Some links
 
 - Author for this repository - [Gabriel Rocha](https://rochaf.com)
-- Author of the project idea - [Diego] (https://github.com/diegosf)
+- Author of the project idea - [Diego](https://github.com/diegosf)
 - Rocketseat - [Event platform](https://app.rocketseat.com.br/event/ignite-lab-04/nodejs/abertura)
