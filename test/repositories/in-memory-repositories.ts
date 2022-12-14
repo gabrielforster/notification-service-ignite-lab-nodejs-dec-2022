@@ -1,4 +1,4 @@
-import { Notification } from '../../src/app/entities/notification';
+import { Notification } from '@app/entities/notification';
 import { NotificationsRepository } from '../../src/app/repositories/notifications-repository';
 
 export class InMemoryNotificationRepository implements NotificationsRepository {
