@@ -9,7 +9,7 @@ interface CancelNotificationRequest {
 type CancelNotificationResponse = void;
 
 @Injectable()
-export class SendNotification {
+export class CancelNotification {
   constructor(private notificationRepository: NotificationsRepository) {}
 
   async execute(
