@@ -3,8 +3,8 @@ import { SendNotification } from './send-notification';
 
 describe('Send notification', () => {
   it('should be able to send a notification', async () => {
-    const notifiactionsReposotory = new InMemoryNotificationRepository();
-    const sendNotification = new SendNotification(notifiactionsReposotory);
+    const notifiactionsRepository = new InMemoryNotificationRepository();
+    const sendNotification = new SendNotification(notifiactionsRepository);
 
     const { notification } = await sendNotification.execute({
       recipientId: 'recipientId',
@@ -12,7 +12,7 @@ describe('Send notification', () => {
       category: 'social',
     });
 
-    expect(notifiactionsReposotory.notifications).toHaveLength(1);
-    expect(notifiactionsReposotory.notifications[0]).toEqual(notification);
+    expect(notifiactionsRepository.notifications).toHaveLength(1);
+    expect(notifiactionsRepository.notifications[0]).toEqual(notification);
   });
 });
