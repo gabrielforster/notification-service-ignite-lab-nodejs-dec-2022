@@ -2,19 +2,19 @@ import { Injectable } from '@nestjs/common';
 import { NotificationsRepository } from '../repositories/notifications-repository';
 import { NotificationNotFound } from './errors/notification-not-found-error';
 
-interface UnreadNoficationRequest {
+interface UnreadNotificationRequest {
   notificationId: string;
 }
 
-type UnreadNoficationResponse = void;
+type UnreadNotificationResponse = void;
 
 @Injectable()
-export class UnreadNofication {
+export class UnreadNotification {
   constructor(private notificationRepository: NotificationsRepository) {}
 
   async execute(
-    request: UnreadNoficationRequest,
-  ): Promise<UnreadNoficationResponse> {
+    request: UnreadNotificationRequest,
+  ): Promise<UnreadNotificationResponse> {
     const { notificationId } = request;
 
     const notification = await this.notificationRepository.findById(
